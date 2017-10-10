@@ -1,0 +1,341 @@
+@media only screen and (min-width: 740px ) and (max-width: 959px){
+	.container{
+		width: 740px;
+		margin: 0 auto;
+	}
+	 .Header .description {
+		left: 100px;
+	}
+	/*********HOME********/
+	#nav-icon3 {
+	display: none;
+}
+.heading{
+  	font-size: 40px;
+}
+.button {
+	margin-left: 270px;
+}
+.features {
+	margin-top: 140px;
+	margin-left: 50px;
+	}
+
+	.features_item p{
+	font-size: 14px;
+}
+.button a {
+	padding-top: 10px;
+}
+
+.navigation{
+	height: 50px;
+	}
+	.navigation img{
+		display: block;
+		margin: auto;
+		margin-top: -4px;
+		margin-bottom: 5px;
+	}
+	nav li {
+    margin-left: 10px;
+}
+nav{
+	margin-right: 32px;
+}
+
+/***************SEVICES***********/
+.Services {
+	height: 980px;
+	}
+.Services .ServicesInside{
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.Services .ServicesInsideItem{
+	height: 290px;
+	width: 240px;
+	margin-bottom: 20px;
+	}
+
+	.Services .ServicesInside{
+	margin-top: 80px;
+	}
+	.Services .ServicesInsideItem .iconsline{
+	padding-top: 20px;
+}
+
+.Services .ServicesInsideItem:nth-child(3){
+	margin-left: -30px;
+}
+/*********VIDEO********/
+.Video {
+	height: 350px;
+	}
+	.Video .header {
+	padding-top: 70px;
+}
+/**********PORTFOLIO*************/
+	.PortfolioInside .Row{
+	justify-content: center;
+	}
+	.PortfolioInside .Row .item:nth-child(2n+1){
+	margin-right: 10px;
+	}
+	.PortfolioInside .Row .item:nth-child(2n){
+	margin-right: 0;
+	}
+	.Portfolio {
+		height: 1885px;
+	}
+	/*************OUR TEAM*********/
+
+	.Team {
+		height: 1470px;
+	}
+	.Team .TeamMembers{
+		flex-wrap: wrap;
+		margin-top: 60px;
+		margin-left: 30px;
+		justify-content: center;
+	}
+
+	.TeamMembers .SingleMember {
+		margin-bottom: 10px;
+	}
+
+	.Team .container>img{
+	margin-left: 190px;
+	}
+
+	.MemberDetailed .Heading{
+	padding-top: 30px;
+	padding-left: 40px;
+	}
+
+	.MemberDetailed .Heading .textOfDetailed {
+		margin-top: 15px;
+		width: 450px;
+		height: 270px;
+	}
+	.SocialConnect .tangle {
+	position: absolute;
+	right: 190px;
+}
+
+	.SocialConnect .verticalLine{
+	right: 170px;
+}
+
+.SocialConnect .Links{
+	right: 30px;
+	}
+
+	/********STATISTIC**********/
+
+.StatisticContainer {
+	justify-content: center;
+}
+
+.StatisticContainer .StatisticItem {
+	margin-right: 60px;
+}
+
+.StatisticContainer .StatisticItem:nth-child(4){
+	padding-right: 110px;
+}
+
+.StatisticContainer .StatisticItem:nth-child(3){
+	margin-right: 40px;
+	padding-left: 3px;
+}
+
+/*********PRICING************/
+.Pricing {
+	height: 900px;
+	}
+.Package .PackageItem .price{
+	left: 85px;
+}
+
+.Package .PackageItem .Button {
+	padding-left: 20px;
+	padding-top: 10px;
+}
+.Package .PackageItem{
+	height: 500px;
+	margin-right: 10px;
+	}
+.Package .PackageItem .description{
+	padding-top: 15px;
+	font-size: 13px;
+}
+.Pricing .Package{
+	margin-top: 80px;
+	justify-content: center;
+}
+/**********TESTIMONIALS*********/
+.Testimonials{
+	height: 820px;
+	}
+.Testimonials .Feedbacks>img{
+	top: 160px;
+	right: 10px;
+	width: 270px;
+	height: 250px;
+
+	}
+
+.Testimonials .Feedbacks {
+	margin-top: 120px;
+}
+/*.Feedbacks .Details {
+	height: 314px;
+	width: 822px;
+}*/
+/***********WHY SELECT US***********/
+.WhySelectUs {
+	height: 1050px;
+}
+.WhySelectUs .Features{
+	justify-content: center;
+}
+.WhySelectUs .Features .FeatureItem{
+	margin-right: 35px;
+	margin-bottom: 39px;
+
+}
+
+.WhySelectUs .Features .FeatureItem:nth-child(2n){
+	margin-right: 0;
+}
+
+.WhySelectUs .Features .FeatureItem:nth-child(3){
+	margin-right: 35px;
+}
+.WhySelectUs .Features .FeatureItem:nth-child(5){
+	margin-bottom: 20px;
+}
+.WhySelectUs .Features .FeatureItem:nth-child(6){
+	margin-right: 20px;
+	}
+.WhySelectUs .CallAction .Button{
+	margin-right: 190px;
+	margin-top: -29px;
+}
+.WhySelectUs .CallAction{
+	margin-top: 15px;
+}
+.WhySelectUs .CallAction h3{
+	padding-right: 273px;
+	font-size: 18px;
+}
+
+	/*********blog************/
+	.Blog .BlogPosts{
+		justify-content: center;
+	}
+	.FeaturePostLeft>img{
+	width: 360px;
+	height: 350px;
+}
+.BlogPosts .FeaturePostLeft{
+	margin-right: 15px;
+}
+
+.BlogPosts .FeaturePostLeft .Author{
+	bottom: 320px;
+	left: 25px;
+}
+ .FeaturePostLeft article{
+ 	padding-top: 5px;
+ 	padding-left: 10px;
+ }
+.FeaturePostLeft article p{
+  	width: 350px;
+  	height: 120px;
+  	}
+
+  	.SinglePostRightItem article p{
+	width: 350px;
+  	height: 80px;
+  }
+
+  .FeaturePostLeft article h2{
+  	font-size: 18px;
+  	width: 380px;
+  }
+
+ .SinglePostRightItem .Author{
+	padding-top: 5px;
+	padding-left: 10px;
+}
+.SinglePostRightItem article{
+	padding-top: 5px;
+	padding-left: 10px
+}
+
+.SinglePostRightItem article h3{
+	font-size: 16px;
+}
+	
+.BlogPosts> div {
+	height: 650px;
+	width: 360px;
+	}
+
+.SinglePostRight{
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.SinglePostRight .SinglePostRightItem{
+   	margin-bottom: 10px;
+
+}
+/**************SUBSCRIPTION*********/
+.Subscription .form{
+	width: 60%;
+}
+.Subscription .form input:first-child{
+	width: 186px;
+	font-size: 14px;
+}
+.Subscription .form input:last-child{
+	width:160px;
+	font-size: 14px;
+}
+.Subscription h3{
+	font-size: 24px;
+}
+.Subscription{
+	height: 350px;
+	}
+
+
+/*******************CONTACT*************/
+.Contact .Form>input:nth-child(2){
+	width: 355px;
+}
+.Contact .Form{
+	padding-left: 140px;
+}
+.FormInside input{
+	margin-right: 0;
+	}
+.Contact .Form>input:nth-child(3){
+	margin-left: 85px;
+	}
+
+/*********FOOTER*********/
+.Contact footer {
+	margin-top: 90px;
+}
+footer .Column{
+	padding-top: 30px;
+	padding-left: 60px;
+}
+
+footer .Column .ColumnItem{
+	margin-right: 40px;
+	}

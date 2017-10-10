@@ -1,0 +1,744 @@
+@media only screen and (min-width: 320px ) and (max-width: 739px){
+	.container{
+		width: 320px;
+		margin: 0 auto;
+	}
+/* **************NAVBAR****************/
+#nav-icon3 {
+	display: block;
+}
+/*Задаємо розміри блокові*/
+#nav-icon3 {
+	float: right;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  margin: 3px 10px; 
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+/*Задаємо розміри лініям*/
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #212121;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+/* Чотири лінії, друга і третя накладаються. Задаємо відступи.*/
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 9px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 18px;
+}
+/*Опускаємо першу лінію на місце другої та третьої і задаємо їй ширину 0*/
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%; /* для того щоб зменшувалася до 0 із двох сторін*/
+}
+/*дргу лінію повертаємо на 45 градусів за годинниковою стрілкою*/
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*Третю лінію, яка накладалася із другою повертаємо на 45 градусів проти годинникової стрілки*/
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*Підіймаємо четверту лінію на місце другої та третьої і задаємо їй ширину 0*/
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%; /* для того щоб зменшувалася до 0 із двох сторін*/
+}
+nav li {
+	display: block;
+    background-color: grey;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    }
+    nav li:hover {
+    color: #ffffff;
+	background-color: #272727;
+    }
+nav {
+	visibility: hidden;
+	margin-top: 0;
+	width: 100%;
+	text-align: center;
+	clear: both;
+}
+nav li a {
+ 	padding: 2px 10px;
+ 	color: #FFFFFF;
+ 	}
+ 	nav li:first-child {
+	margin: 0 auto;
+	margin-bottom: 2px;
+}
+ .Header img{
+ 	width: 60px;
+ 	height:60px; 
+	display: block;
+	margin: auto;
+	padding-top: 6px;
+}
+.heading{
+	padding-top: 10px;
+}
+.navigation{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.navigation>img{
+	float: left;
+	margin-left:  110px;
+	margin-bottom: 8px;
+}
+.Header h2 {
+	font-size: 20px;
+}
+ .Header p {
+	font-size: 10px;
+}
+
+ .Header .description {
+	top: 40px;
+	left: 10px;
+}
+.Header .description p{
+	padding-top: 10px;
+}
+	/****************HOME**********/
+	.home {
+	height: 550px;
+	}
+	 .heading{
+  	font-size: 20px;
+	}
+	.button {
+	margin-left: 105px;
+	margin-top: 20px;
+	}
+	.button a {
+	padding: 5px 20px;
+	font-size: 10px;
+	}
+	.features {
+	margin-top: 70px;
+	margin-left: 35px;
+	}
+	.features_item p{
+	padding-top: 15px;
+	font-size: 10px;
+	text-align: center;
+	}	
+	.features_item{
+		margin-right: 30px;
+	}
+	.features_item:first-child{
+		margin-right: 30px;
+	}
+
+	/****************ABOUT US**********/
+	.About{
+	margin-top: 10px;
+	height: 370px;
+	}
+	.Left img {
+	display: none;
+}
+.Right {
+	margin-top: 20px;
+	background-color: white;
+	float: right;
+	width: 300px;
+	height: 330px;
+	margin-right: 10px;
+}
+
+.About .HeaderUs .Heading h2 {
+	margin-left: 105px;
+	font-size: 20px;
+
+}
+
+.About .HeaderUs img {
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: auto;
+}
+.About .HeaderUs .Heading p{
+	margin-left: 3px;
+	margin-top: 31px;
+	margin-right: 4px;
+	font-size: 11px;
+    line-height: 1.5;
+}
+
+
+.About .Heading{
+	top: 40px;
+}
+.Right .Lines img {
+	width: 100%;
+}
+
+/**************SEVICES***********/
+.Services {
+	height: 1090px;
+	}
+.Services .ServicesInside{
+	margin-top: 50px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.Services .ServicesInsideItem{
+	height: 230px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.Services .ServicesInsideItem .iconsline{
+	height: 49px;
+	padding-top: 20px;
+}
+
+.Services .ServicesInsideItem p {
+	font-size: 11px;
+}
+.Services .ServicesInsideItem h2 {
+	font-size: 16px;
+}
+/*********VIDEO********/
+.Video {
+	display: none;
+}
+
+/*********Portfolio**************/
+
+.Portfolio {
+	height: 2190px;
+}
+
+.PortfolioInside {
+	margin-top: 40px;
+}
+
+.PortfolioInside .Row{
+	justify-content: center;
+}
+
+.PortfolioInside .Row .item .hover{
+	display: none;
+}
+.PortfolioInside .Row .item:hover .hover {
+	display: none;
+
+}
+.PortfolioInside .Row .item>img{
+	width: 300px;
+	height: 220px;
+}
+.PortfolioInside .Row .item{
+	margin-right: 0;
+	margin-bottom: 10px;
+	height: 220px;
+}
+
+
+/************TEAM*****************/
+
+.Team {
+
+	height: 1390px;
+	}
+.Team .TeamMembers{
+	margin-top: 40px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.TeamMembers .SingleMember {
+	width: 290px;
+	height: 310px;
+	margin-bottom: 10px;
+	margin-right: 0;
+}
+.SingleMember .details .name{
+	font-size: 15px;
+}
+.SingleMember .details .status{
+	font-size: 11px;
+}
+.MemberDetailed {
+	display:none;
+}
+.Team .container>img{
+	display:none;
+}
+
+.TeamMembers .SingleMember > img {
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	height: 230px;
+}
+
+.SingleMember .details .line {
+	padding-top: 20px;
+}
+
+	/********STATISTIC**********/
+	.Statistic {
+	height: 390px;
+}
+	.StatisticContainer {
+		padding-top: 30px;
+		padding-left: 10px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.StatisticContainer .StatisticItem {
+		margin-right: 30px;
+	margin-bottom: 15px;
+}
+
+.StatisticContainer .StatisticItem:nth-child(3){
+	margin-right: 30px;
+	}
+	.StatisticContainer .StatisticItem:nth-child(4){
+	margin-right: 10px;
+}
+.StatisticItem .imageline .fourth{
+	padding-top: 2px;
+	padding-right: 8px;
+}
+.StatisticItem .statName{
+	font-size: 15px;
+}
+.StatisticItem .statDescr {
+	font-size: 11px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+/******************WORK STEPS*****************/
+.HowWeWork {
+	height: 1150px;
+	}
+.HowWeWork .Steps{
+	margin-top: 85px;
+}
+.Steps .StepItem{
+	height: 250px;
+	margin-bottom: 10px;
+}
+.Steps .StepItem .left {
+	height: 250px;
+	width: 250px;
+	position: relative;
+	margin: 0 auto;
+	}
+
+	.StepItem .right {
+	display: none;
+	}
+	
+	.StepItem .name{
+	font-size: 15px;
+}
+.StepItem .description{
+	font-size: 11px;''
+}
+
+.StepItem .left .nameDescription {
+	padding-top: 40px;
+}
+.StepItem .left .number {
+	width: 40px;
+	height: 40px;
+	padding-top: 40px;
+	padding-left: 30px;
+
+}
+.StepItem .left .number2 {
+	width: 40px;
+	height: 40px;
+}
+.StepItem .description{
+	width: 220px;
+	height: 130px;
+	padding-left: 30px;
+	padding-top: 30px;
+	font-size: 12px;
+}
+
+/******************PRICING**************/
+.Pricing {
+	height: 1270px;
+}
+.Pricing .Package{
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 50px;
+}
+.Package .PackageItem h4 {
+	padding-top: 15px;
+	font-size: 15px;
+}
+.Package .PackageItem .circle img{
+	padding-top: 10px;
+	height: 80px;
+	width: 80px;
+}
+.Package .PackageItem .price{
+	top: 40px;
+}
+.PackageItem .price span{
+	font-size: 10px;
+}
+.Package .PackageItem .price{
+	left: 105px;
+	font-size: 15px;
+}
+
+.Package .PackageItem:last-child{
+	margin-right: 10px;
+}
+.Package .PackageItem .Button {
+	padding-left: 80px;
+	padding-top: 10px;
+}
+.Package .PackageItem .Button a{
+	font-size: 11px;
+	font-weight: 600;
+	border: 1px solid;
+	padding: 5px 10px;
+	border-radius: 40px;
+}
+.Package .PackageItem{
+	height: 370px;
+	width: 260px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.Package .PackageItem .description{
+	padding-top: 15px;
+	font-size: 11px;
+	height: 180px;
+}
+
+/**********TESTIMONIALS*********/
+.Testimonials{
+	height: 435px;
+	}
+.Testimonials .Feedbacks {
+	margin-top: 40px;
+	}
+.Testimonials .Feedbacks>img{
+	display: none;
+}
+
+.Feedbacks .Details {
+	height: 300px;
+	width: 300px;
+}
+
+.Feedbacks .Details .Text{
+		left: 10px;
+		top: 20px;
+		width: 290px;
+		height: 200px;
+}
+.Feedbacks .Details .Text p:nth-child(1){
+	font-size: 11px;
+}
+.Feedbacks .Details .Text p:nth-child(2){
+	padding-top: 23px;
+	font-size: 20px;
+}
+.Feedbacks .Details .Text p:nth-child(3){
+	font-size: 12px;
+}
+.Feedbacks .Details .Text p:nth-child(4){
+	font-size: 12px;
+}
+.Feedbacks .Details .pic1{
+	display: none;
+}
+
+.Feedbacks{
+	margin-right: 10px;
+}
+
+/****************WHY SELECT US*************/
+
+.WhySelectUs {
+	height: 1090px;
+}
+
+.WhySelectUs .Features{
+	margin-top: 40px;
+
+}
+.WhySelectUs .Features .FeatureItem:nth-child(1){
+	margin-bottom: 0;
+}
+.WhySelectUs .Features .FeatureItem:nth-child(2){
+	margin-bottom: 0;
+}
+.WhySelectUs .Features .FeatureItem:nth-child(6){
+	margin-bottom: 0;
+}
+.WhySelectUs .CallAction .Button{
+	margin-right: 70px;
+	margin-top: 20px;
+}
+.WhySelectUs .CallAction{
+	margin-top: 15px;
+}
+.WhySelectUs .CallAction h3{
+	padding-right: 15px;
+	font-size: 14px;
+}
+
+.Features .FeatureItem h4{
+	font-family: "Poppins";
+	font-size: 14px;
+}
+
+.Features .FeatureItem p{
+	width: 280px;
+	height: 80px;
+	font-family: "Poppins";
+	font-size: 12px;
+
+}
+.WhySelectUs .CallAction .Button{
+	margin-right: 100px;
+
+}
+
+.WhySelectUs .CallAction  .Button a{
+	font-size: 12px;
+	padding: 5px 20px;
+}
+
+
+/*****************BLOG*****************/
+/*******************BLOG***********************/
+.Blog{
+	height: 1200px;
+}
+
+.BlogPosts> div {
+	height: 400px;
+	width: 300px;
+}
+.BlogPosts> div:first-child {
+	height: 420px;
+	width: 300px;
+}
+.Blog .BlogPosts{
+	margin-top: 40px;
+	width: 300px;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 10px;
+}
+.SinglePostRight{
+	flex-direction: column;
+	justify-content: center;
+}
+	.FeaturePostLeft>img{
+	width: 300px;
+	height: 250px;
+	display: block;
+	margin: auto;
+}
+
+.FeaturePostLeft{
+	height: 420px;
+	margin-bottom: 135px;
+}
+
+	 .FeaturePostLeft article{
+	height: 100px;
+ 	padding-top: 10px;
+ 	padding-left: 10px;
+ }
+
+  .FeaturePostLeft article h2{
+  	width: 290px;
+  	height: 30px;
+  	font-size: 15px;
+  }
+
+  .FeaturePostLeft article p{
+  	padding-top: 30px;
+  	width: 290px;
+  	height: 70px;
+  	font-size: 12px;
+  }
+
+ .SinglePostRightItem .Author{
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.SinglePostRightItem .Author p:first-child {
+	font-size: 12px;
+
+}
+  .SinglePostRightItem article{
+	padding-top: 9px;
+	padding-left: 10px;
+}
+
+.SinglePostRightItem article h3{
+	width: 270px;
+	font-weight: 500;
+	font-size: 15px;
+	color: #272727;
+}
+
+.SinglePostRightItem article p{
+	width: 290px;
+  	height: 150px;
+  	font-size: 12px;
+
+}
+
+ .SinglePostRight .SinglePostRightItem{
+ 	width: 300px;
+   	height: 210px;
+   	margin-bottom: 10px;
+   	}
+
+   	.BlogPosts .FeaturePostLeft .Author{
+	bottom: 180px;
+
+
+	left: 15px;
+}
+	.BlogPosts .FeaturePostLeft .Author p{
+		font-size: 12px;
+	}
+/**************SUBSCRIPTION*********/
+.Subscription{
+	height: 205px;
+	}
+.Subscription .form{
+	width: 85%;
+}
+.Subscription .form input:first-child{
+	width: 110px;
+	font-size: 12px;
+}
+.Subscription .form input:last-child{
+	width:100px;
+	font-size: 10px;
+	padding-top: 12px;
+	padding-bottom: 11px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.Subscription h3{
+	font-size: 15px;
+	padding-top: 30px;
+}
+
+	/*******************CONTACT*************/
+	.Contact{
+	height: 680px;
+}
+	.Contact .Form>input:nth-child(2){
+	width: 190px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+.Contact .Form{
+	padding-top: 60px;
+}
+.FormInside input{
+	margin-right: 30px;
+	margin-bottom: 10px;
+	width: 201px;
+	height: 25px;
+}
+.Form input{
+	font-size: 12px;
+}
+.Contact .Form>input:nth-child(3){
+	margin-left: 40px;
+	padding: 5px 10px;
+	}
+	/*********FOOTER*********/
+	.Contact footer {
+	margin-top: 40px;
+	height: 180px;
+}
+footer .Column{
+	flex-wrap: wrap;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+footer .Column .ColumnItem{
+	margin-right: 30px;
+	}
+
+	.Column .ColumnItem h4{
+	font-family: "Poppins";
+	font-size: 12px;
+	padding-bottom: 15px;
+}
+footer .Column .ColumnItem:last-child{
+	margin-top: 5px;
+	margin-left: 70px;
+}
+.Column .ColumnItem:last-child h4{
+	margin-left: 40px;
+	padding-bottom: 10px;
+
+}
+
+.Column .ColumnItem p{
+	font-family: "Poppins";
+	font-size: 10px;
+	}
+	.Contact footer>img:nth-child(1){
+	display: none;
+}
