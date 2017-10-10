@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Socket.IO chat</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { font: 13px Helvetica, Arial; }
+            #writeMessage {display: none; background: #000; padding: 3px; position: fixed; top: 2%; left:2%; width: 50%; }
+            #writeMessage input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+            #writeMessage button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+            #chatAccess { margin: 10px;}
+            #messages { list-style-type: none; margin-top: 60px; margin-left: 3.5%; padding: 0; }
+            #messages li { padding: 5px 10px; width: 94%; }
+            #messages li:nth-child(odd) { background: #eee; }
+            #status { margin-left: 3.5%;}
+            #userList {list-style-type: none; margin-top: 10px; margin-left: 2%; }
+            #userList li {text-align: center; padding: 5px 10px; color:#52be80; cursor: pointer; }
+            .active {background-color: yellow; }
+            #userList li:hover {background-color: #eee;}
+
+            .right{ position: absolute; left:60%; display: none; margin-top: 20px; }
+            .left {position: fixed; width: 55%;}
+        </style>
+    </head>
+    <body>
+        <div id="error-container"></div>
+        <form id="chatAccess">
+            <input id="name" type="text" name="name" value="" placeholder="Enter your nickname!">
+            <button type="button" name="button" onclick="setUsername()">Chat!</button>
+        </form>
+        <div class="left">
+            <ul id="messages"></ul>
+            <div id ="status"> </div>
+        </div>
+        <div class="right" id ="rightSide">
+            <h2 style="color:red">Users online:</h2>
+            <ul id="userList"></ul>
+        </div>
+        <form id="writeMessage" action="">
+            <input id="m" autocomplete="off" /><button>Send</button>
+        </form>
+        
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        <script>
+            let socket = io();
+
+            function setUsername(){
+                socket.emit('setUsername', document.getElementById('name').value);
+            };
+
+            
+
+            var user;
+            var users = [];
+            var sendTo = 'General';
+
+            socket.on('userExists', function(data){
+                document.getElementById('error-container').innerHTML = data;
+            });
+
+            socket.on('userSet', function(data){
+                user = data.username;
+                document.getElementById('error-container').style.display = "none";
+                document.getElementById('chatAccess').style.display = "none";
+                document.getElementById('writeMessage').style.display = "block";
+                document.getElementById('rightSide').style.display = "block";
+                socket.emit('userConnect', user);
+            });
+
+            $(function () {               
+                $('form').submit(() => {
+                    var msg = $('#m').val();
+                    if(sendTo == 'General') 
+                        socket.emit('chat message', {message:msg, user:user});
+                    else
+                        socket.emit('pm', user, sendTo, msg); //private message
+
+                    $('#m').val('');
+                    return false;
+                });
+
+                
+                socket.on('chat message', (data) => {
+                    if(sendTo !== 'General')
+                        $('#messages').append(`<li>${data.user}: ${data.message}</li>`);
+                    else
+                        $('#messages').append(`<li><b>${data.user}</b>: ${data.message}</li>`);
+                });
+            });
+            // when someone is writing
+            $("#m").on("keyup", (event) => {
+                socket.emit("sender", {user: user});
+            });
+
+            socket.on("sender", (data) => {
+                $('#status').html(`<b>${data.user}</b>: is typing...`)
+                    .css({"background-color": "#eeeefe", "padding": "5px 10px", "width": "91%"});
+                setTimeout(() => {
+                    $("#status").html('').css({"backgroud-color": "white", "padding" : 0});
+
+                }, 2000);
+            });
+            // put online users
+            socket.on('sendUsers', (data) => {
+                users = data;
+                $('#userList').html('');
+                $('#userList').append(`<li><b>General</b></li>`); // загальний чат
+                for(let i = 0; i < users.length; i++){
+                    if(users[i] !== user)
+                        $('#userList').append(`<li><b>${users[i]}</b></li>`);
+                }
+            });
+
+            $('#userList').on('click', 'li', function () {
+                //private message
+                $('li').removeClass('active');
+                $(this).addClass('active');
+                sendTo = $(this).text();
+            });
+
+        </script>
+            
+    </body>
+</html>
