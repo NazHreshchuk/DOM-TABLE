@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cropper</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="cropper.css">
+	</head>
+	<body >
+	<!-- Form for choose image -->
+		<form>
+  			<fieldset id="parent">
+  				<br>
+			    <legend>Image source:</legend>
+				<input type="radio" name="source" value="local" id="local" onclick="ckeckChoice()" checked> Local<br>
+  				<input type="radio" name="source" value="remote" id="remote" onclick="ckeckChoice()"> Remote<br><br>
+  				<input type="text" id="path" name="text" contenteditable='true' disabled>
+  				<!-- <input type="text" id='tempPath' contenteditable="true" > -->
+			    <button type="button" id="browse" onclick="openPopupWindow()"> Browse </button>
+			    <input type="file" id="file" style="display:none">
+			    <button type="button" id="paste"> Paste </button>		    
+			</fieldset>
+		</form>
+		<!-- switcher -->
+	
+		<!-- photo -->
+		<div class="photoPlace">
+				<div class="switcher">
+					<h3>Crop mode</h3>
+					<label class="switch">
+			  			<input type="checkbox" id="checkbox">
+	 					<div class="slider round"></div>
+					</label>
+				</div>
+			<canvas id="myCanvas">
+				
+			</canvas>
+		</div>
+		<div id="myModal" class="modal">
+		<!-- Modal content -->
+			<div class="modal-content">
+				<p> Confirm cropped image <p><hr><br>
+				<span class="close">&times;</span>
+				<canvas id="croppedImage"> </canvas><br><hr><br>
+				<button type="button" id="cancel"> Cancel </button> 
+				<button type="button" id="replace">Replace</button>
+				<button type="button" id="saveAs">Save As</button><br>
+			</div>
+
+		</div>
+		<script src="cropper.js"></script>
+	</body>
+</html>
