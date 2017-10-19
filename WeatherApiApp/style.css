@@ -1,0 +1,112 @@
+#app {
+    width: 1140px;
+	margin: 0 auto;
+    text-align: center;
+}
+
+.mainWeather {
+    margin: 50px auto;
+    width: 700px;
+    height: 575px;
+    background-color: rgb(241, 248, 235);
+    border: 1px solid black; 
+}
+
+.setLocation {
+    margin-top: 30px;
+}
+
+.inputForm {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid rgb(138, 39, 14);
+}
+
+.buttonWeather {
+    font-size: 16px;
+    border: 1px solid rgb(138, 39, 14);
+    padding: 5px;
+    background-color: rgb(216, 234, 216);
+    color: rgb(138, 39, 14);
+}
+
+.buttonWeather:hover {
+    cursor: pointer;
+}
+
+.buttonWeather:active {
+    background-color: grey;
+}
+
+
+.weatherPhoto {
+    width: 35%;
+    height: 20%;
+    margin: 0 auto;
+}
+
+.address {
+    color:rgb(138, 39, 14);
+}
+
+.date {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: darkred;
+}
+
+.temperature {
+    font-size: 45px;
+    color: purple;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.generalWeather {
+    color:rgb(138, 39, 14);
+}
+
+.wind {
+    color: black;
+    font-size: 20px;
+}
+
+.footerWeather {
+    display: flex;
+}
+
+.forecast-list-item {
+    padding: 5px;
+    background-color: rgb(216, 234, 216);
+    border: 1px solid rgb(138, 39, 14);
+}
+
+.footerTemperature {
+    color: purple;
+}
+
+.footerWind {
+    color: black;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
